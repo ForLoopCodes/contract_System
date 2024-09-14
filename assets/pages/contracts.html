@@ -1,75 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contracts</title>
-    <link rel="stylesheet" href="../css/contracts.css">
-</head>
+    <link rel="stylesheet" href="../css/contracts.css" />
+  </head>
 
-<body>
-    <section id="contracts">
-        <div class="contracts-container">
-            <h2>My Contracts</h2>
-            <div class="contracts-list">
-                <div class="contract-item">
-                    <div class="contract-details">
-                        <p><strong>Contract ID:</strong> #00123</p>
-                        <p><strong>Farmer Name:</strong> Ram</p>
-                        <p><strong>Product:</strong> Wheat</p>
-                        <p><strong>Quantity:</strong> 1000 kg</p>
-                        <p><strong>Price:</strong> $5000</p>
-                        <p><strong>Status:</strong> Pending</p>
-                    </div>
-                    <div class="contract-actions">
-                        <button class="btn view-btn">View</button>
-                    </div>
-                </div>
-
-                <div class="contract-item">
-                    <div class="contract-details">
-                        <p><strong>Contract ID:</strong> #00124</p>
-                        <p><strong>Farmer Name:</strong> Rajesh</p>
-                        <p><strong>Product:</strong> Rice</p>
-                        <p><strong>Quantity:</strong> 2000 kg</p>
-                        <p><strong>Price:</strong> $8000</p>
-                        <p><strong>Status:</strong> Completed</p>
-                    </div>
-                    <div class="contract-actions">
-                        <button class="btn view-btn">View</button>
-                    </div>
-                </div>
-
-                <div class="contract-item">
-                    <div class="contract-details">
-                        <p><strong>Contract ID:</strong> #00125</p>
-                        <p><strong>Farmer Name:</strong> Rakesh</p>
-                        <p><strong>Product:</strong> Corn</p>
-                        <p><strong>Quantity:</strong> 1500 kg</p>
-                        <p><strong>Price:</strong> $6000</p>
-                        <p><strong>Status:</strong> In Progress</p>
-                    </div>
-                    <div class="contract-actions">
-                        <button class="btn view-btn">View</button>
-                    </div>
-                </div>
-                <div class="contract-item">
-                    <div class="contract-details">
-                        <p><strong>Contract ID:</strong> #00126</p>
-                        <p><strong>Farmer Name:</strong> ABC</p>
-                        <p><strong>Product:</strong> Corn</p>
-                        <p><strong>Quantity:</strong> 1500 kg</p>
-                        <p><strong>Price:</strong> $6000</p>
-                        <p><strong>Status:</strong> In Progress</p>
-                    </div>
-                    <div class="contract-actions">
-                        <button class="btn view-btn">View</button>
-                    </div>
-                </div>
-            </div>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="../images/logo.png" alt="logo" /></a>
         </div>
-    </section>
-</body>
+        <ul class="nav-links">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="./farmer-my-contracts.html">My Contracts</a></li>
+          <li><a href="./farmer-new-contracts.php">Add Product</a></li>
+        </ul>
+        <button class="toggle-menu" id="toggle-menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+    </header>
 
+    <main>
+      <section id="contracts">
+        <h1>My Contracts</h1>
+        <div class="tabs">
+          <button class="tab-button active" data-target="all">
+            All Contracts
+          </button>
+          <button class="tab-button" data-target="pending">Pending</button>
+          <button class="tab-button" data-target="completed">Completed</button>
+          <button class="tab-button" data-target="in-progress">
+            In Progress
+          </button>
+        </div>
+        <div class="container">
+          <div class="tab-content">
+            <div id="all" class="tab-pane active">
+              <!-- All Contracts Tab Content -->
+              <div class="contract-item">
+                <div class="contract-details">
+                  <p><strong>Contract ID:</strong> #00123</p>
+                  <p><strong>Farmer Name:</strong> Ram</p>
+                  <p><strong>Product:</strong> Wheat</p>
+                  <p><strong>Quantity:</strong> 1000 kg</p>
+                  <p><strong>Price:</strong> $5000</p>
+                  <p><strong>Status:</strong> Pending</p>
+                </div>
+                <div class="contract-actions">
+                  <button class="btn view-btn">View</button>
+                </div>
+              </div>
+
+              <div class="contract-item">
+                <div class="contract-details">
+                  <p><strong>Contract ID:</strong> #00124</p>
+                  <p><strong>Farmer Name:</strong> Rajesh</p>
+                  <p><strong>Product:</strong> Rice</p>
+                  <p><strong>Quantity:</strong> 2000 kg</p>
+                  <p><strong>Price:</strong> $8000</p>
+                  <p><strong>Status:</strong> Completed</p>
+                </div>
+                <div class="contract-actions">
+                  <button class="btn view-btn">View</button>
+                </div>
+              </div>
+
+              <div class="contract-item">
+                <div class="contract-details">
+                  <p><strong>Contract ID:</strong> #00125</p>
+                  <p><strong>Farmer Name:</strong> Rakesh</p>
+                  <p><strong>Product:</strong> Corn</p>
+                  <p><strong>Quantity:</strong> 1500 kg</p>
+                  <p><strong>Price:</strong> $6000</p>
+                  <p><strong>Status:</strong> In Progress</p>
+                </div>
+                <div class="contract-actions">
+                  <button class="btn view-btn">View</button>
+                </div>
+              </div>
+              <div class="contract-item">
+                <div class="contract-details">
+                  <p><strong>Contract ID:</strong> #00126</p>
+                  <p><strong>Farmer Name:</strong> ABC</p>
+                  <p><strong>Product:</strong> Corn</p>
+                  <p><strong>Quantity:</strong> 1500 kg</p>
+                  <p><strong>Price:</strong> $6000</p>
+                  <p><strong>Status:</strong> In Progress</p>
+                </div>
+                <div class="contract-actions">
+                  <button class="btn view-btn">View</button>
+                </div>
+              </div>
+            </div>
+            <!-- Additional tabs content (pending, completed, in-progress) can be added here similarly -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© 2024 ContractFarm. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.querySelectorAll(".tab-button").forEach((button) => {
+        button.addEventListener("click", () => {
+          const target = button.getAttribute("data-target");
+
+          document
+            .querySelectorAll(".tab-button")
+            .forEach((btn) => btn.classList.remove("active"));
+          button.classList.add("active");
+
+          document.querySelectorAll(".tab-pane").forEach((pane) => {
+            if (pane.id === target) {
+              pane.classList.add("active");
+            } else {
+              pane.classList.remove("active");
+            }
+          });
+        });
+      });
+
+      document
+        .getElementById("toggle-menu")
+        .addEventListener("click", function () {
+          const navLinks = document.querySelector(".nav-links");
+          navLinks.classList.toggle("active");
+        });
+    </script>
+  </body>
 </html>

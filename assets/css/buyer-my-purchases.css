@@ -1,47 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text color */
+  padding: 20px;
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  background-color: #1e1e1e; /* Dark container background */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-    text-align: center;
-    color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff; /* Light color for header */
 }
 
-.purchase-card {
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 5px;
+.contract-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
 
-.purchase-card h2 {
-    margin: 0;
+.contract {
+  background-color: #333; /* Dark background for contract items */
+  padding: 15px;
+  border: 1px solid #444;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.purchase-card p {
-    margin: 5px 0;
+.contract h2 {
+  margin-bottom: 10px;
+  color: #e0e0e0; /* Light color for contract titles */
 }
 
-/* Media Queries */
+.contract p {
+  margin-bottom: 8px;
+  color: #ccc; /* Slightly lighter color for contract details */
+}
+
+.contract-actions {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.btn {
+  padding: 12px;
+  background-color: #555;
+  color: #e0e0e0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #777;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #e0e0e0; /* Light color for form labels */
+}
+
+form input,
+form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #222; /* Dark input and button backgrounds */
+  color: #e0e0e0; /* Light text color for inputs and buttons */
+}
+
+form input:focus,
+form button:focus {
+  outline: none;
+  border-color: #555;
+}
+
 @media (max-width: 768px) {
-    .container {
-        padding: 15px;
-    }
+  .container {
+    padding: 15px;
+  }
 }
 
 @media (max-width: 480px) {
-    .purchase-card {
-        padding: 10px;
-    }
+  form input,
+  form button {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contract {
+    padding: 10px;
+  }
+
+  .contract h2 {
+    font-size: 18px;
+  }
+
+  .contract p {
+    font-size: 13px;
+  }
 }

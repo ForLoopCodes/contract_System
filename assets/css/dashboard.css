@@ -1,250 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+:root {
+  --bg-color: #121212; /* Dark background color */
+  --container-bg: #222; /* Solid background color for containers */
+  --text-color: #e0e0e0; /* Light text color */
+  --button-bg: #4caf5088; /* Green button background */
+  --button-hover-bg: #388e3c; /* Darker green for button hover */
+  --card-bg: #333; /* Dark card background */
+  --card-border: #444; /* Border color for cards */
+  --shadow-color: rgba(0, 0, 0, 0.2); /* Shadow color for elements */
+  --heading-color: #4caf50; /* Green color for headings */
+  --tab-bg: #333; /* Background color for tab buttons */
+  --tab-active-bg: #555; /* Background color for active tab */
+  --tab-hover-bg: #444; /* Background color for tab hover */
+  --transition-speed: 0.3s; /* Transition speed */
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: all var(--transition-speed) ease;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-}
-
-.btn {
-    padding: 12px;
-    background-color: #333;
-    color: white !important;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: all ease 0.5s;
-}
-
-.btn:hover {
-    background-color: #111;
+  background-color: var(--bg-color); /* Dark background */
+  color: var(--text-color); /* Light text color */
 }
 
 header {
-    position: sticky;
-    top: 0;
+  position: sticky;
+  top: 0;
+  background-color: var(--container-bg);
+  z-index: 1000;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f4f4f4;
-    color: var(--white-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: var(--container-bg);
 }
 
 .navbar .logo img {
-    width: 50px;
-    padding: 5px;
+  width: 50px;
 }
 
 .navbar .nav-links {
-    display: flex;
-    gap: 20px;
-    padding: 15px 0px;
-    margin: 0;
+  display: flex;
+  gap: 20px;
 }
 
 .navbar .nav-links li {
-    position: relative;
-    list-style: none;
+  list-style: none;
 }
 
 .navbar .nav-links a {
-    font-weight: 700;
-    color: #000;
-    padding: 10px;
-    display: block;
-    text-decoration: none;
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 700;
+  border-radius: 5px;
+  transition: background-color var(--transition-speed),
+    color var(--transition-speed);
 }
 
 .navbar .nav-links a:hover {
-    background-color: #333;
-    color: #fff;
-}
-
-.navbar .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: var(--bg-color);
-    list-style: none;
-    padding: 0;
-}
-
-.navbar .dropdown-menu li {
-    padding: 10px;
-}
-
-.navbar .dropdown-menu a {
-    color: var(--white-color);
-}
-
-.navbar .dropdown:hover .dropdown-menu {
-    display: block;
-    background-color: var(--bg-color);
+  background-color: #333;
+  color: #fff;
 }
 
 .navbar .toggle-menu {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
 }
 
 .navbar .toggle-menu i {
-    display: block;
-    margin: 5px 20px;
-    font-size: 20px;
+  color: var(--text-color);
 }
 
-.content {
-    padding: 20px;
+main {
+  padding: 20px;
 }
 
-.content h1 {
-    text-align: center;
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-h2 {
-    color: #333;
-    margin-bottom: 20px;
+.tab-button {
+  background: var(--tab-bg);
+  color: var(--text-color);
+  border: none;
+  padding: 12px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background var(--transition-speed), color var(--transition-speed);
 }
 
-.dashboard-widgets {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-    flex-wrap: wrap;
+.tab-button.active {
+  background: var(--tab-active-bg);
 }
 
-.widget {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 200px;
-    text-align: center;
-    margin: 10px;
+.tab-button:hover {
+  background: var(--tab-hover-bg);
 }
 
-.widget h3 {
-    margin-bottom: 10px;
-    color: #333;
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.widget p {
-    font-size: 24px;
-    color: #333;
+.tab-pane {
+  display: none;
+  width: 100%;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    padding: 20px 0px;
-    background-color: #333;
-    text-align: center;
+.tab-pane.active {
+  display: block;
 }
 
-footer p {
-    margin: 0;
-    color: #fff;
+.container {
+  background-color: var(--container-bg); /* Solid background color */
+  color: var(--text-color);
+  width: 1000px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--heading-color);
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.contract-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.contract-card h2 {
+  margin-top: 0;
+  font-size: 22px;
+  color: var(--heading-color);
+}
+
+.contract-card p {
+  margin: 8px 0;
+}
+
+.btn {
+  padding: 12px;
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color var(--transition-speed),
+    transform var(--transition-speed);
+  margin: 5px;
+}
+
+.btn:hover {
+  background-color: var(--button-hover-bg);
+  transform: scale(1.05); /* Slight scale effect on hover */
 }
 
 /* Media Queries */
+@media (max-width: 1024px) {
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
 
-/* For tablets (768px and below) */
+  .tab-button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
+
 @media (max-width: 768px) {
-    .navbar .toggle-menu {
-        display: block;
-    }
+  .navbar .toggle-menu {
+    display: block;
+  }
 
-    .navbar .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: var(--bg-color);
-    }
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--container-bg);
+  }
 
-    .navbar .nav-links.active {
-        display: flex;
-        position: absolute;
-        top: 100%;
-        background-color: #f4f4f4;
-    }
+  .navbar .nav-links.active {
+    display: flex;
+  }
 
-    .navbar .nav-links a {
-        text-align: center;
-        color: var(--white-color);
-        padding: 15px;
-    }
+  .tab-button {
+    padding: 10px 15px;
+  }
 
-    .dashboard-widgets {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .widget {
-        width: 100%;
-        max-width: 350px;
-    }
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
 }
 
-/* For mobile devices (480px and below) */
 @media (max-width: 480px) {
-    .navbar h1 {
-        font-size: 24px;
-    }
+  .contract-card {
+    padding: 15px;
+  }
 
-    .navbar ul li a {
-        font-size: 16px;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    .widget {
-        width: 90%;
-        max-width: 300px;
-        padding: 15px;
-    }
-
-    .widget h3 {
-        font-size: 18px;
-    }
-
-    .widget p {
-        font-size: 20px;
-    }
-}
-
-/* For very small devices (320px and below) */
-@media (max-width: 320px) {
-    .navbar h1 {
-        font-size: 20px;
-    }
-
-    .navbar ul li a {
-        font-size: 14px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    .widget {
-        width: 100%;
-        max-width: 280px;
-        padding: 10px;
-    }
-
-    .widget h3 {
-        font-size: 16px;
-    }
-
-    .widget p {
-        font-size: 18px;
-    }
+  .btn {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    font-size: 14px;
+  }
 }

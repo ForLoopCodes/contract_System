@@ -1,75 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --bg-color: #000; /* Dark background color */
+  --container-bg: #1c1c1c; /* Slightly lighter dark background for container */
+  --text-color: #fff; /* White text color */
+  --card-bg: #2e2e2e; /* Slightly lighter background for cards */
+  --btn-bg: #4a4a4a; /* Background color for buttons */
+  --btn-hover-bg: #333; /* Darker background color for button hover */
+  --shadow-color: rgba(0, 0, 0, 0.2); /* Shadow color for elements */
+  --gradient-primary: linear-gradient(
+    135deg,
+    #1d1d1d,
+    #3a3a3a
+  ); /* Gradient for containers and sections een gradient for containers and sections */
+  --gradient-secondary: linear-gradient(
+    135deg,
+    #4caf50,
+    #2e7d32
+  ); /* Gradient for button hover effects */
+  --transition-speed: 0.3s; /* Transition speed */
+  --heading-color: #4caf50; /* Color for headings */
+  --heading-shadow: transparent; /* Shadow color for headings */
+}
+
+* {
+  font-family: "Inter", sans-serif !important;
+  transition: all var(--transition-speed) ease;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  background-color: var(--bg-color);
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: var(--gradient-primary);
+  color: var(--text-color);
+  width: 1000px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 20px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  animation: fadeInUp var(--transition-speed) ease-out;
 }
 
 h1 {
-    text-align: center;
-    color: #333;
+  text-align: center;
+  color: var(--heading-color);
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 5px var(--heading-shadow);
+  animation: fadeIn var(--transition-speed) ease-out;
 }
 
 .contract-card {
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 5px;
+  background: var(--card-bg);
+  border: 1px solid #444;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  transition: transform var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
+  animation: fadeInUp var(--transition-speed) ease-out;
+}
+
+.contract-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px var(--shadow-color);
 }
 
 .contract-card h2 {
-    margin-top: 0;
+  color: var(--heading-color);
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--heading-color);
+  text-shadow: 0 1px 3px var(--heading-shadow);
 }
 
 .contract-card p {
-    margin: 5px 0;
+  margin: 5px 0;
+  color: var(--text-color);
 }
 
 .btn {
-    padding: 12px;
-    background-color: #333;
-    color: white !important;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: all ease 0.5s;
+  padding: 12px 20px;
+  background: var(--btn-bg);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background var(--transition-speed) ease,
+    transform var(--transition-speed) ease;
+  background: var(--gradient-secondary);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .btn:hover {
-    background-color: #111;
+  background: white;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transform: scale(1.05);
 }
 
+/* Keyframe animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* Media Queries */
 @media (max-width: 768px) {
-    .container {
-        padding: 15px;
-    }
+  .container {
+    padding: 15px;
+  }
 
-    .btn {
-        padding: 8px 12px;
-        font-size: 14px;
-    }
+  .btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 480px) {
-    .contract-card {
-        padding: 10px;
-    }
+  .contract-card {
+    padding: 15px;
+  }
 
-    .btn {
-        display: block;
-        width: 100%;
-        margin: 5px 0;
-    }
+  .btn {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+  }
 }

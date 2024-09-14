@@ -1,98 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+:root {
+  --bg-color: #121212; /* Dark background color */
+  --container-bg: linear-gradient(
+    135deg,
+    #222,
+    #222
+  ); /* Green gradient for container background */
+  --text-color: #e0e0e0; /* Light text color */
+  --card-bg: #1e1e1e; /* Dark card background */
+  --input-bg: #2a2a2a; /* Dark background for inputs */
+  --input-border: #444; /* Input border color */
+  --button-bg: #4caf50; /* Green button background */
+  --button-hover-bg: #388e3c; /* Darker green for button hover */
+  --error-color: #ff4d4d; /* Red color for errors */
+  --shadow-color: rgba(0, 0, 0, 0.2); /* Shadow color for elements */
+  --transition-speed: 0.3s; /* Transition speed */
+  --heading-color: #4caf50; /* Green color for headings */
+}
+
 * {
+  font-family: "Inter", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  transition: all var(--transition-speed) ease;
 }
 
 body {
-  background-color: #f4f4f4;
+  background-color: var(--bg-color); /* Dark background */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin: 0;
 }
 
-.login-container {
-  background-color: #fff;
-  padding: 40px;
+.auth-container {
+  background: var(--container-bg); /* Green gradient for container */
+  color: var(--text-color);
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  width: 400px;
+  box-shadow: 0 4px 15px var(--shadow-color);
   text-align: center;
+  position: relative;
 }
 
 h2 {
   margin-bottom: 20px;
-  color: #333;
-}
-
-.login-form {
-  display: flex;
-  flex-direction: column;
+  color: var(--heading-color); /* Green color for header */
+  font-size: 24px;
+  text-shadow: 1px 1px 4px rgba(76, 175, 80, 0.3); /* Green shadow for header */
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   text-align: left;
 }
 
 label {
+  display: block;
   margin-bottom: 5px;
-  font-size: 16px;
-  color: #333;
+  color: var(--text-color); /* Light color for labels */
+  font-size: 14px;
 }
 
 input {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: 1px solid var(--input-border);
   border-radius: 5px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
   font-size: 16px;
+  outline: none;
+  transition: border-color var(--transition-speed);
 }
 
-.btn {
+input:focus {
+  border-color: var(--heading-color); /* Green border color on focus */
+}
+
+button {
   padding: 12px;
-  background-color: #333;
-  color: white !important;
+  background-color: var(--button-bg);
+  color: var(--text-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  transition: all ease 0.5s;
+  width: 100%;
+  transition: background-color var(--transition-speed),
+    transform var(--transition-speed);
 }
 
-.btn:hover {
-  background-color: #111;
+button:hover {
+  background-color: var(--button-hover-bg);
+  transform: scale(1.05); /* Slight scale effect on hover */
 }
 
-/* Media Queries for Responsiveness */
+.error-message {
+  color: var(--error-color); /* Red color for errors */
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
-  .login-container {
-      width: 90%;
-      padding: 30px;
-  }
-
-  h2 {
-      font-size: 24px;
-  }
-
-  input, .login-btn {
-      font-size: 16px;
+  .auth-container {
+    padding: 20px;
+    max-width: 90%;
   }
 }
 
 @media (max-width: 480px) {
-  .login-container {
-      width: 100%;
-      padding: 20px;
+  .auth-container {
+    padding: 15px;
   }
 
-  h2 {
-      font-size: 20px;
-  }
-
-  input, .login-btn {
-      font-size: 14px;
+  input,
+  button {
+    font-size: 14px;
   }
 }
