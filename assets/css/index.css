@@ -1,0 +1,382 @@
+:root {
+    --bg-color: #575757;
+    --white-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 00px 15px;
+}
+
+h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 12px;
+    background-color: #333;
+    color: white !important;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all ease 0.5s;
+}
+
+.btn:hover {
+    background-color: #111;
+}
+
+
+header {
+    position: sticky;
+    top: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;
+    color: var(--white-color);
+}
+
+.navbar .logo img {
+    width: 60px;
+    padding: 5px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+    padding: 15px 30px;
+}
+
+.navbar .nav-links li {
+    position: relative;
+}
+
+.navbar .nav-links a {
+    font-weight: 700;
+    color: #000;
+    padding: 10px;
+    display: block;
+}
+
+.navbar .nav-links a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.navbar .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--bg-color);
+    list-style: none;
+    padding: 0;
+}
+
+.navbar .dropdown-menu li {
+    padding: 10px;
+}
+
+.navbar .dropdown-menu a {
+    color: var(--white-color);
+}
+
+.navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    background-color: var(--bg-color);
+}
+
+.navbar .toggle-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.navbar .toggle-menu i {
+    display: block;
+    margin: 5px 20px;
+    font-size: 20px;
+}
+
+#backToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+#home .hero {
+    background-image: url('../images/banner.avif');
+    background-size: cover;
+    background-position: center;
+    color: var(--white-color);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+#home .hero h1 {
+    color: var(--white-color);
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#home .hero p {
+    color: var(--white-color);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+#home .hero .cta-button {
+    padding: 12px 24px;
+    margin-right: 20px;
+}
+
+#features {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background-color: var(--white-color);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.feature i {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+#how-it-works {
+    padding: 50px 20px;
+    color: var(--white-color);
+    text-align: center;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.step {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.step h3 {
+    color: #333;
+}
+
+.step p {
+    color: #333;
+}
+
+#about-us {
+    padding: 60px 10px 20px 10px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+
+#about-us h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+#about-us p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+#about-us h3 {
+    font-size: 28px;
+    color: #333;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+#about-us ul {
+    margin: 0 auto;
+    text-align: left;
+    display: inline-block;
+}
+
+#about-us ul li {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+#contact {
+    padding: 50px 0px;
+    background-color: var(--white-color);
+}
+
+.contact-container {
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input,
+textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+#faqs {
+    padding: 50px 0px;
+    background-color: #f4f4f4;
+}
+
+.faq-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-header {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    display: block;
+}
+
+.accordion-body {
+    max-height: 0;
+    padding: 0 15px;
+    background-color: #f1f1f1;
+    border-left: 3px solid #333;
+    overflow: hidden;
+    border-radius: 0 0 5px 5px;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.accordion-body p {
+    margin: 0;
+    padding: 15px 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+
+footer {
+    padding: 20px;
+    background-color: #333;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    color: #fff;
+}

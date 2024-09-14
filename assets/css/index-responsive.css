@@ -1,0 +1,194 @@
+@media (min-width: 1200px) {
+
+    .features-container,
+    .steps {
+        flex-wrap: nowrap;
+    }
+
+    .feature,
+    .step {
+        width: 300px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .navbar .toggle-menu {
+        display: none;
+    }
+
+    .features-container,
+    .steps {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .feature,
+    .step {
+        width: 45%;
+        margin: 10px 2%;
+    }
+
+    .navbar .nav-links {
+        flex-direction: row;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    #about-us h2 {
+        font-size: 30px;
+    }
+
+    #about-us p,
+    #about-us ul li {
+        font-size: 16px;
+    }
+
+    #about-us h3 {
+        font-size: 24px;
+    }
+
+    .accordion-header {
+        font-size: 18px;
+    }
+
+    .accordion-body {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    #backToTopBtn {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+
+    #home .hero {
+        padding: 50px 10px;
+    }
+
+    .faq-container {
+        width: 90vw;
+    }
+
+    .navbar .toggle-menu {
+        display: block;
+    }
+
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--bg-color);
+    }
+
+    .navbar .nav-links.active {
+        display: flex;
+        position: absolute;
+        top: 100%;
+    }
+
+    .navbar .nav-links a {
+        text-align: center;
+        color: var(--white-color);
+        padding: 15px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .features-container,
+    .steps {
+        flex-direction: column;
+    }
+
+    .feature,
+    .step {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    #about-us h2 {
+        font-size: 24px;
+    }
+
+    #about-us p,
+    #about-us ul li {
+        font-size: 14px;
+    }
+
+    #about-us h3 {
+        font-size: 20px;
+    }
+
+    #about-us ul {
+        text-align: left;
+    }
+
+    #about-us ul li {
+        margin-bottom: 8px;
+    }
+
+    .accordion-header {
+        font-size: 16px;
+    }
+
+    .accordion-body {
+        padding: 8px;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+    .navbar .logo img {
+        width: 60px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .cta-button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .features-container,
+    .steps {
+        flex-direction: column;
+    }
+
+    .feature,
+    .step {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .accordion-header {
+        font-size: 14px;
+    }
+
+    .accordion-body {
+        padding: 6px;
+    }
+}

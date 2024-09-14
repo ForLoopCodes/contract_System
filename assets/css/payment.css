@@ -1,0 +1,138 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+#payment {
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+#payment h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#payment form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+#payment button {
+    padding: 12px;
+    background-color: #333;
+    color: white !important;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all ease 0.5s;
+}
+
+#payment button:hover {
+    background-color: #111;
+}
+
+
+
+.payment-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 750px;
+    margin: 20px auto;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    .payment-container {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    #payment h2 {
+        font-size: 28px;
+    }
+
+    input,
+    select,
+    textarea {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    #payment button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .payment-container {
+        padding: 10px;
+        max-width: 95%;
+    }
+
+    #payment h2 {
+        font-size: 24px;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    #payment button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 320px) {
+    .payment-container {
+        padding: 8px;
+        max-width: 100%;
+    }
+
+    #payment h2 {
+        font-size: 20px;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    #payment button {
+        font-size: 12px;
+        padding: 6px;
+    }
+}

@@ -1,0 +1,105 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.contracts-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+.contracts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contract-item {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fafafa;
+}
+
+.contract-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contract-details p {
+    margin: 0;
+}
+
+.contract-actions {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 12px;
+    background-color: #333;
+    color: white !important;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all ease 0.5s;
+}
+
+.btn:hover {
+    background-color: #111;
+}
+
+
+
+/* Responsive Design */
+
+/* Tablets */
+@media (min-width: 768px) {
+    .contracts-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .contract-item {
+        flex-basis: 48%;
+    }
+}
+
+/* Desktops */
+@media (min-width: 992px) {
+    .contract-item {
+        flex-basis: 30%;
+    }
+}
+
+/* Small devices */
+@media (max-width: 576px) {
+    .contract-item {
+        flex-basis: 100%;
+    }
+
+    .contract-actions {
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .contract-actions .btn {
+        width: 100%;
+    }
+}
